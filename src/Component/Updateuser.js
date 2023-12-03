@@ -8,7 +8,7 @@ const Updateuser = () => {
     const [name, namechange] = useState('');
     const [email, emailchange] = useState('');
     const [phone, phonechange] = useState('');
-    const [role, rolechange] = useState('staff');
+    const [role, rolechange] = useState('member');
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { code } = useParams();
@@ -68,7 +68,7 @@ const Updateuser = () => {
                                     <label>Role</label>
                                     <select value={role || ''} onChange={e => rolechange(e.target.value)} className="form-control">
                                         <option value="admin">admin</option>
-                                        <option value="staff">member</option>
+                                        <option value="member">member</option>
                                     </select>
                                 </div>
                             </div>

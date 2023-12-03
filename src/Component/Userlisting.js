@@ -16,6 +16,8 @@ const Userlisting = (props) => {
     props.loaduser();
   }, []);
 
+  
+
   const handledelete = () => {
     if (window.confirm("Do you want to remove selected users?")) {
       selectedUsers.forEach((id) => {
@@ -29,7 +31,7 @@ const Userlisting = (props) => {
 
   const handleSearch = (e) => {
     setSearchQuery(e.target.value);
-    setCurrentPage(1); // Reset pagination when performing a new search
+    setCurrentPage(1);
   };
 
   const handleCheckboxChange = (id) => {
