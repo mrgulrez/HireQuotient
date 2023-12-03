@@ -1,6 +1,5 @@
 import axios from "axios";
 import { toast } from "react-toastify";
-import { Updateuser } from "../Component/Updateuser";
 import {
   ADD_USER,
   DELETE_USER,

@@ -79,11 +79,13 @@ const Userlisting = (props) => {
                   <div>
                     {selectedUsers.length > 0 ? (
                       <button
-                        onClick={handledelete}
-                        className="btn btn-danger"
-                      >
-                        <FontAwesomeIcon icon={faTrash} /> Delete Selected
-                      </button>
+                      onClick={() => {
+                        handledelete(); // Remove the argument here
+                      }}
+                      className="btn btn-danger"
+                    >
+                      <FontAwesomeIcon icon={faTrash} />
+                    </button>
                     ) : (
                       <Link to={"/user/add"} className="btn btn-success">
                         Add User [+]

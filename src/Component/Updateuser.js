@@ -7,7 +7,6 @@ const Updateuser = () => {
     const [id, idchange] = useState(0);
     const [name, namechange] = useState('');
     const [email, emailchange] = useState('');
-    const [phone, phonechange] = useState('');
     const [role, rolechange] = useState('member');
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -18,10 +17,11 @@ const Updateuser = () => {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        const userobj = { id, name, email, phone, role };
-        dispatch(FunctionUpdateUser(userobj,id));
+        const updatedUser = { id, name, email, role }; 
+        dispatch(FunctionUpdateUser(updatedUser, code)); 
         navigate('/user');
     }
+    
 
     useEffect(() => {
         dispatch(FetchUserObj(code));
